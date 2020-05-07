@@ -3,16 +3,19 @@ import { Link } from 'gatsby'
 
 import IndexProvider from '../layouts'
 
+import { Container } from '../components/Container'
 import { TodoCompleted } from '../components/TodoCompleted'
 
 const PageTwo = () => {
   return (
     <IndexProvider>
-      <h1>Page 2</h1>
+      <Container>
+        <h1>Page 2</h1>
 
-      <TodoCompleted />
+        <TodoCompleted />
 
-      <Link to="/">Take me back home.</Link>
+        <Link to="/">Back to page 1</Link>
+      </Container>
     </IndexProvider>
   )
 }

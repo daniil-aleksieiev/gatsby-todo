@@ -6,18 +6,22 @@ import { useStore } from '../hooks/useStore'
 import 'mobx-react-lite/batchingForReactDom'
 
 import { TodoItem } from './TodoItem'
+import { ListItemWrapper } from './StyledUI/ListItem'
 
 export const TodoCompleted = () => {
   const todoList = useStore()
 
   return useObserver(() => (
     <div className="todo-completed">
-      todo completed
-      {todoList.finishedTodos.map(todo => (
-        <li key={shortid.generate()}>
-          <TodoItem todo={todo} />
-        </li>
-      ))}
+      {todoList.finishedTodos.length ? (
+        todoList.finishedTodos.map(todo => (
+          <ListItemWrapper key={shortid.generate()}>
+            <TodoItem todo={todo} />
+          </ListItemWrapper>
+        ))
+      ) : (
+        <h2>No completed tasks</h2>
+      )}
     </div>
   ))
 }

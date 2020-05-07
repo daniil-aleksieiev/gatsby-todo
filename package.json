@@ -1,5 +1,4 @@
 {
-  "homepage": "http://daniil-aleksieiev.github.io/gatsby-todo/",
   "name": "todo-list",
   "description": "To-do app using TS and Mobx.",
   "version": "1.0.0",

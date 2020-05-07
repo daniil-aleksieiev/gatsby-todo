@@ -3,6 +3,9 @@ import React from 'react'
 import TodoItemClass from '../stores/todoItem'
 import { useStore } from '../hooks/useStore'
 
+import { Checkbox } from './StyledUI/Checkbox'
+import { RemoveButton } from './StyledUI/RemoveButton'
+
 interface Props {
   todo: TodoItemClass
 }
@@ -13,11 +16,9 @@ export const TodoItem = ({ todo }: Props) => {
   return (
     <>
       <span>{todo.text}</span>
-      <div>
-        <input type="checkbox" onChange={() => todoList.completeTodo(todo)} defaultChecked={todo.isDone} />
-        <button type="button" onClick={() => todoList.removeTodo(todo)}>
-          X
-        </button>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <Checkbox onChange={() => todoList.completeTodo(todo)} defaultChecked={todo.isDone} />
+        <RemoveButton onClick={() => todoList.removeTodo(todo)} />
       </div>
     </>
   )

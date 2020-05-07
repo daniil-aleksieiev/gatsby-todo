@@ -4,7 +4,7 @@ export const colors = {
   brand: '#663399',
   lilac: '#9d7cbf',
   accent: '#ffb238',
-  success: '#37b635',
+  success: '#4CAF50',
   warning: '#ec1818',
   ui: {
     bright: '#e0d6eb',
@@ -37,6 +37,7 @@ export const breakpoints = {
 }
 
 export const widths = {
+  sm: 500,
   md: 720,
   lg: 960,
   xl: 1140
@@ -44,6 +45,7 @@ export const widths = {
 
 export const dimensions = {
   fontSize: {
+    small: 14,
     regular: 16,
     large: 18
   },
@@ -61,5 +63,5 @@ export const dimensions = {
 }
 
 export const heights = {
-  header: 60
+  input: 45
 }

@@ -79,10 +79,11 @@ export default `
     text-rendering: optimizeLegibility;
   }
   h1 {
-    margin-top: 0;
+    margin: 30px 0;
     font-size: ${dimensions.headingSizes.h1}rem;
   }
   h2 {
+    margin-bottom: 30px;
     font-size: ${dimensions.headingSizes.h2}rem;
   }
   h3 {
